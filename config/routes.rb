@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :songs
 
   get '/artists/:id', :to => 'songs#artists'
+  get '/artists/:id/songs', :to => 'songs#artist_show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -6,6 +6,7 @@ class CreateSongs < ActiveRecord::Migration[6.0]
       t.integer :duration
       t.string :preview
       t.string :album_pic
+      t.integer :artist_deezer_id
 
       t.timestamps
     end

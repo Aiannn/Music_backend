@@ -15,4 +15,8 @@ class SongsController < ApplicationController
 
         render json: response.parsed_response
     end
+
+    def destroy
+        Song.destroy(params[:id])
+    end
 end

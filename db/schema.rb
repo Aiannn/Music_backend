@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_12_24_011646) do
     t.integer "duration"
     t.string "preview"
     t.string "album_pic"
+    t.integer "artist_deezer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

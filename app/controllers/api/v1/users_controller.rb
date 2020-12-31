@@ -16,6 +16,13 @@ class Api::V1::UsersController < ApplicationController
         end 
     end
 
+    def update
+        @user = User.find_by(username: params[:username])
+
+        @user.update(avatar: params[:avatar])
+        render json: { user: UserSerializer.new(@user) }
+    end
+
     private 
     def user_params
         params.require(:user).permit(:username, :password, :avatar)
